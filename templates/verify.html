@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Vérifier la signature</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 380px; }
+        h2 { text-align: center; color: #333; }
+        label { font-size: 14px; color: #666; }
+        input { width: 100%; margin: 8px 0 20px 0; }
+        button { background: #3498db; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; }
+        .status { text-align: center; margin-top: 15px; padding: 10px; border-radius: 5px; }
+        .valide { background: #d4edda; color: #155724; }
+        .invalide { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vérification</h2>
+        <form method="post" enctype="multipart/form-data">
+            <label>Document original :</label>
+            <input type="file" name="file" required>
+            
+            <label>Fichier signature (.bin) :</label>
+            <input type="file" name="signature" required>
+            
+            <button type="submit">Vérifier l'authenticité</button>
+        </form>
+
+        {% if message %}
+        <div class="status {% if 'VALIDE' in message and 'NON' not in message %}valide{% else %}invalide{% endif %}">
+            {{ message }}
+        </div>
+        {% endif %}
+        
+        <p style="text-align: center;"><a href="/" style="color: #999; text-decoration: none; font-size: 13px;">← Retour à la signature</a></p>
+    </div>
+</body>
+</html>

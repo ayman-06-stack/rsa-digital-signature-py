@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Signer un document</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        h2 { color: #333; }
+        input { width: 100%; margin: 15px 0; }
+        button { background: #2ecc71; color: white; border: none; padding: 10px; width: 100%; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #27ae60; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Signature</h2>
+        <p>Choisissez un fichier à signer numériquement.</p>
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <button type="submit">Signer et Télécharger (.bin)</button>
+        </form>
+        <a href="/verify">Aller à la vérification →</a>
+    </div>
+</body>
+</html>

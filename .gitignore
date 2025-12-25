@@ -1,0 +1,8 @@
+keys/private_key.pem
+
+uploads/
+*.bin
+
+venv/
+__pycache__/
+.env

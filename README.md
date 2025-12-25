@@ -22,7 +22,7 @@
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 L'organisation du projet suit une structure Flask standard:
 
 | Dossier/Fichier | Description |
@@ -35,7 +35,7 @@ L'organisation du projet suit une structure Flask standard:
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 1. **Cloner le projet**
    ```bash
